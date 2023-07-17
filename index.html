@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity WebGL Player | BRELYON_Core</title>
+  <title>Unity WebGL Player | BrelyonSim</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
 </head>
@@ -58,14 +58,14 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/BrelyonUnitySimulation.loader.js";
+    var loaderUrl = buildUrl + "/unitywebgltest1.loader.js";
     var config = {
-      dataUrl: buildUrl + "/BrelyonUnitySimulation.data",
-      frameworkUrl: buildUrl + "/BrelyonUnitySimulation.framework.js",
-      codeUrl: buildUrl + "/BrelyonUnitySimulation.wasm",
+      dataUrl: buildUrl + "/unitywebgltest1.data",
+      frameworkUrl: buildUrl + "/unitywebgltest1.framework.js",
+      codeUrl: buildUrl + "/unitywebgltest1.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
-      productName: "BRELYON_Core",
+      productName: "BrelyonSim",
       productVersion: "0.1",
       showBanner: unityShowBanner,
     };
@@ -99,7 +99,7 @@
       canvas.style.height = "540px";
     }
 
-    canvas.style.background = "url('" + buildUrl + "/BrelyonUnitySimulation.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/unitywebgltest1.jpg') center / cover";
     loadingBar.style.display = "block";
 
     var script = document.createElement("script");
@@ -110,7 +110,7 @@
       }).then((unityInstance) => {
         loadingBar.style.display = "none";
         //fullscreenButton.onclick = () => {
-        //unityInstance.SetFullscreen(1);
+        //  unityInstance.SetFullscreen(1);
         //};
       }).catch((message) => {
         alert(message);
